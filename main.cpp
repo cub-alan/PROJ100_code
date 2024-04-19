@@ -4,6 +4,7 @@
 #include "pwm_tone.h"
 #include "PROJ100_Encoder.h"
 #include "PROJ100_Encoder_Tests.h"
+#include <cstdio>
 
 #define TIME_PERIOD 10             //Constant compiler Values here 10 equates to 10ms or 100Hz base Frequency
 #define ENCODER_PIN_LEFT            D8
@@ -55,15 +56,12 @@ int main ()
     // If these lines are left in the lines below will never run
     /*************************************************/
 
-    // simple_test();
-    speed_test();
-
+    //simple_test();
+    //speed_test();
+    BATMAN(2);
     while(true){
 
         // Write the parts of your code which should run in a loop between here..
-
-
-
 
         // ..and here
 
