@@ -64,12 +64,30 @@ int main ()
     wait_us(3000*1000);
     
     if(myButton == 0) { // if the button is only pressed and not held begin to run the beed pushing task
+
         while(1){ // infinate loop for beed pushing task
 
-            // Write the parts of your code which should run in a loop between here..
+            BATMAN(2); // play the theme song might have to remove if song is too long
 
-            // ..and here
+            Wheel.Speed(1.0,1.0); // move forward at full speed
+            wait_us(1000*1000); // change to time taken to get to the edge
 
+            while (microswitch1 == 0){ // until the buggy hits the back
+                Wheel.Speed(-1.0,-1.0); // reverse at full speed
+            }
+
+            Wheel.Speed(1.0,-1.0); // turn on the spot
+            wait_us(1000*1000); // wait till its 45 degrres
+            
+            Wheel.Speed(1.0,1.0); // move forard away from back wall
+            wait_us(1000*1000); // until it has moved away from the wall
+
+            Wheel.Speed(-1.0,1.0); // turn on the spot
+            wait_us(1000*1000); // wait till its 45 degrres back to parrellel to the wall
+
+            while (microswitch1 == 0){ // until the buggy hits the back
+                Wheel.Speed(-1.0,-1.0); // reverse at full speed
+            }
         }
     }
     else if (myButton == 1){ // if the button is still on after 3 seconds do the parrellel line task
