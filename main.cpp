@@ -58,12 +58,20 @@ int main ()
 
     //simple_test();
     //speed_test();
-    BATMAN(2);
-    while(true){
 
-        // Write the parts of your code which should run in a loop between here..
+    BATMAN(2); // batman test delete later
 
-        // ..and here
+    wait_us(3000*1000);
+    if (myButton == 1){ // if the button is still on after 3 seconds do the parrellel line task
+        
+    }
+    else{ // if the button is only pressed and not held begin to run the beed pushing task
+        while(1){ // infinate loop for beed pushing task
 
-    };
+            // Write the parts of your code which should run in a loop between here..
+
+            // ..and here
+
+        }
+    }
 }
