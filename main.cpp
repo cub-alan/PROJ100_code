@@ -62,10 +62,8 @@ int main ()
     BATMAN(2); // batman test delete later
 
     wait_us(3000*1000);
-    if (myButton == 1){ // if the button is still on after 3 seconds do the parrellel line task
-        
-    }
-    else{ // if the button is only pressed and not held begin to run the beed pushing task
+    
+    if(myButton == 0) { // if the button is only pressed and not held begin to run the beed pushing task
         while(1){ // infinate loop for beed pushing task
 
             // Write the parts of your code which should run in a loop between here..
@@ -73,5 +71,31 @@ int main ()
             // ..and here
 
         }
+    }
+    else if (myButton == 1){ // if the button is still on after 3 seconds do the parrellel line task
+        
+        Wheel.Speed(1.0,1.0); // go forward both wheals at full speed till the end
+        wait_us(1000*1000); // currently at 1 second but will change to time to reach end
+
+        Wheel.Speed(0,0); // make sure it has stopped
+        wait_us(1000*1000); // wait a second before going 
+
+        Wheel.Speed(1.0,-1.0); // spin on the spot both full speed 1 negative one positive
+        wait_us(1000*1000); // also 1 second for now but change to 180 timing
+
+        Wheel.Speed(0,0); // make sure it has stopped
+        wait_us(1000*1000); // wait a second before going 
+
+        Wheel.Speed(1.0,1.0); // drive forward back to the start both wheels full speed
+        wait_us(1000*1000); // change to time taken to drive back
+
+        Wheel.Speed(0,0); // make sure it has stopped
+        wait_us(1000*1000); // wait a second before going 
+
+        Wheel.Speed(-1.0,1.0); // spin 180 the other way as before
+        wait_us(1000*1000); // change to time to turn
+
+        Wheel.Speed(0,0); // stop the buggy
+        BATMAN(2); // victory tune
     }
 }
