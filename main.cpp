@@ -59,9 +59,7 @@ int main ()
     //simple_test();
     //speed_test();
 
-    BATMAN(2); // batman test delete later
-
-    wait_us(3000*1000);
+    wait_us(3000*1000); // to check weather to do beed or line task
     
     if(myButton == 0) { // if the button is only pressed and not held begin to run the beed pushing task
 
