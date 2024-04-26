@@ -82,91 +82,54 @@ void twinkle(int s){
 void BATMAN(int s){
     int count = 0;
     while (count < 4){
-        Tune(buzzer,1e6/D6s,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/D6s,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
-
-        Tune(buzzer,1e6/D6,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/D6,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/G5s,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/B3,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5s,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
+        Tune(buzzer,1e6/B3,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/C4,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/D6,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/D6,s*1);
-        Tune(buzzer,1e6/G6s,s*1);
-        wait_us(100*1000);
-        count = count +1;
+        count = count + 1;
+
     }
-
+    count = 0;
     while (count < 2){
-        Tune(buzzer,1e6/G5s,s*1);
+        Tune(buzzer,1e6/G4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/G5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/G4s,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/A5s,s*1);
+        Tune(buzzer,1e6/G4,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/A5s,s*1);
+        Tune(buzzer,1e6/G4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/F4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/F4s,s*1);
         wait_us(100*1000);
-        count = count +1;
+        Tune(buzzer,1e6/G4,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/G4,s*1);
+        wait_us(100*1000);
+        count = count + 1;
     }
-
+    count = 0;
     while (count < 2){
-        Tune(buzzer,1e6/D5s,s*1);
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/D5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/D5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/D5,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/G5s,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/G5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/D5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/D5,s*1);
-        wait_us(100*1000);
-        count = count +1;
-    }
-
-    while (count < 1){
-        Tune(buzzer,1e6/A5s,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/A5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/A5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/A5,s*1);
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
 
         Tune(buzzer,1e6/C4,s*1);
@@ -174,55 +137,62 @@ void BATMAN(int s){
         Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/A5,s*1);
+        Tune(buzzer,1e6/B3,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/A5,s*1);
+        Tune(buzzer,1e6/B3,s*1);
+        wait_us(100*1000);
+
+        Tune(buzzer,1e6/C4,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
         count = count +1;
     }
-
+    
+    count = 0;
     while (count < 1){
-        Tune(buzzer,1e6/G5s,s*1);
+        Tune(buzzer,1e6/G4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/G5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/G4s,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/A5s,s*1);
+        Tune(buzzer,1e6/G4,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/A5s,s*1);
+        Tune(buzzer,1e6/G4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/F4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5,s*1);
+        Tune(buzzer,1e6/F4s,s*1);
+        wait_us(100*1000);
+
+        Tune(buzzer,1e6/G4,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/G4,s*1);
         wait_us(100*1000);
         count = count +1;
     }
 
-    while (count < 2){
-        Tune(buzzer,1e6/D5s,s*1);
+    count = 0;
+    while (count < 1){
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/D5s,s*1);
-        wait_us(100*1000);
-
-        Tune(buzzer,1e6/D5,s*1);
-        wait_us(100*1000);
-        Tune(buzzer,1e6/D5,s*1);
+        Tune(buzzer,1e6/C4s,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/G5s,s*1);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/G5s,s*1);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
 
-        Tune(buzzer,1e6/D5,s*1);
+        Tune(buzzer,1e6/B3,s*1);
         wait_us(100*1000);
-        Tune(buzzer,1e6/D5,s*1);
+        Tune(buzzer,1e6/B3,s*1);
+        wait_us(100*1000);
+
+        Tune(buzzer,1e6/C4,s*1);
+        wait_us(100*1000);
+        Tune(buzzer,1e6/C4,s*1);
         wait_us(100*1000);
         count = count +1;
     }
