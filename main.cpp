@@ -58,60 +58,90 @@ int main ()
 
     //simple_test();
     //speed_test();
-    BATMAN(2);
-    wait_us(3000*1000); // to check weather to do beed or line task
+    int taskselection = 0;
+    while (myButton == 1){
+        wait_us(1000*1000); // wait 1 second
+        taskselection = taskselection + 1; // add onje to the interger
+    }
     
-    if(myButton == 0) { // if the button is only pressed and not held begin to run the beed pushing task
+    if(taskselection < 2) { // if the button is only pressed and not held begin to run the beed pushing task
 
         while(1){ // infinate loop for beed pushing task
-
-            BATMAN(2); // play the theme song might have to remove if song is too long
-
+            
             Wheel.Speed(1.0,1.0); // move forward at full speed
-            wait_us(1000*1000); // change to time taken to get to the edge
+            wait_us(10000*1000); // change to time taken to get to the edge
+
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
 
             while (microswitch1 == 0){ // until the buggy hits the back
                 Wheel.Speed(-1.0,-1.0); // reverse at full speed
             }
+            
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
 
-            Wheel.Speed(1.0,-1.0); // turn on the spot
-            wait_us(1000*1000); // wait till its 45 degrres
+            Wheel.Speed(-1.0,1.0); // turn on the spot
+            wait_us(1500*1000); // wait till its 45 degrres
+
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
             
             Wheel.Speed(1.0,1.0); // move forard away from back wall
             wait_us(1000*1000); // until it has moved away from the wall
 
-            Wheel.Speed(-1.0,1.0); // turn on the spot
-            wait_us(1000*1000); // wait till its 45 degrres back to parrellel to the wall
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
+
+            Wheel.Speed(1.0,-1.0); // turn on the spot
+            wait_us(1500*1000); // wait till its 45 degrres back to parrellel to the wall
+
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
 
             while (microswitch1 == 0){ // until the buggy hits the back
                 Wheel.Speed(-1.0,-1.0); // reverse at full speed
             }
+
+            Wheel.Speed(0,0);
+            wait_us(500*1000);
+
         }
     }
-    else if (myButton == 1){ // if the button is still on after 3 seconds do the parrellel line task
+    else if (taskselection <4 ){ // if the button is still on after 3 seconds do the parrellel line task
         
         Wheel.Speed(1.0,1.0); // go forward both wheals at full speed till the end
-        wait_us(1000*1000); // currently at 1 second but will change to time to reach end
+        wait_us(10000*1000); // currently at 1 second but will change to time to reach end
 
         Wheel.Speed(0,0); // make sure it has stopped
         wait_us(1000*1000); // wait a second before going 
 
         Wheel.Speed(1.0,-1.0); // spin on the spot both full speed 1 negative one positive
-        wait_us(1000*1000); // also 1 second for now but change to 180 timing
+        wait_us(5000*1000); // also 1 second for now but change to 180 timing
 
         Wheel.Speed(0,0); // make sure it has stopped
         wait_us(1000*1000); // wait a second before going 
 
         Wheel.Speed(1.0,1.0); // drive forward back to the start both wheels full speed
-        wait_us(1000*1000); // change to time taken to drive back
+        wait_us(10000*1000); // change to time taken to drive back
 
         Wheel.Speed(0,0); // make sure it has stopped
         wait_us(1000*1000); // wait a second before going 
 
         Wheel.Speed(-1.0,1.0); // spin 180 the other way as before
-        wait_us(1000*1000); // change to time to turn
+        wait_us(5000*1000); // change to time to turn
 
         Wheel.Speed(0,0); // stop the buggy
         BATMAN(2); // victory tune
+    }
+    else if (taskselection < 6) {
+
+        Wheel.Speed(1.0, 1.0);
+        wait_us(10000*1000);
+
+        Wheel.Speed(0,0);
+
+        BATMAN(2);
+    
     }
 }
